@@ -1,0 +1,56 @@
+{
+  "name": "sandulat/laratron",
+  "description": "Laravel-Rendertron SSR Proxy",
+  "keywords": [
+    "sandulat",
+    "laratron"
+  ],
+  "homepage": "https://github.com/sandulat/laratron",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Alexandru Stratulat",
+      "email": "alexanderstratulat97@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "guzzlehttp/guzzle": "~6.0",
+    "illuminate/support": "5.8.*",
+    "jaybizzle/crawler-detect": "1.*",
+    "laravel/framework": "~5.8.0|~5.9.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "3.8.*",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sandulat\\Laratron\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sandulat\\Laratron\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Sandulat\\Laratron\\LaratronServiceProvider"
+      ],
+      "aliases": {
+        "Laratron": "Sandulat\\Laratron\\LaratronFacade"
+      }
+    }
+  }
+}
