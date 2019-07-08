@@ -10,7 +10,8 @@
 </a>
 <p>
 
-##About
+## About
+
 Since we know that not all crawlers can render Javascript, we have to implement SSR (Server-Side Rendering). Implementing SSR in Laravel may be a headache and the easiest solution could be [Rendertron](https://github.com/GoogleChrome/rendertron).
 
 **Laratron** is a tiny middleware for your Laravel app that detects whether the visitor is a crawler and passes the request to Rendertron.
@@ -18,14 +19,14 @@ Since we know that not all crawlers can render Javascript, we have to implement 
 About Rendertron (from official Readme):
 > Rendertron is designed to enable your Progressive Web App (PWA) to serve the correct content to any bot that doesn't render or execute JavaScript. Rendertron runs as a standalone HTTP server. Rendertron renders requested pages using Headless Chrome, auto-detecting when your PWA has completed loading and serializes the response back to the original request. To use Rendertron, your application configures middleware to determine whether to proxy a request to Rendertron. Rendertron is compatible with all client side technologies, including web components.
 
-##Installation
+## Installation
 First of all we need to install Rendertron. Please consult the [official documentation](https://github.com/GoogleChrome/rendertron) for more info.
 To install Laratron run this inside your project:
 ```bash
 composer require sandulat/laratron
 ```
 
-##Usage
+## Usage
 After installation you can use the middleware **`laratron`** on any route that you'd like to be server-side rendered.
 
 ```php
