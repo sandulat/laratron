@@ -6,13 +6,13 @@ namespace Sandulat\Laratron\Http\Middleware;
 
 use Closure;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\BadResponseException;
-use Illuminate\Http\Response;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
-use Illuminate\Support\Facades\Log;
+use GuzzleHttp\Exception\BadResponseException;
 
 final class LaratronMiddleware
 {
