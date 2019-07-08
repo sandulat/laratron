@@ -26,6 +26,12 @@ To install Laratron run this inside your project:
 composer require sandulat/laratron
 ```
 
+## Configuration
+Laratron exposes only one simple option, the URL of Rendertron, which can be set in your env file:
+```bash
+RENDERTRON_URL=http://localhost:3000
+```
+
 ## Usage
 After installation you can use the middleware **`laratron`** on any route that you'd like to be server-side rendered.
 
