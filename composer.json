@@ -1,6 +1,6 @@
 {
   "name": "sandulat/laratron",
-  "description": "Laravel-Rendertron SSR Proxy",
+  "description": "Laravel-Rendertron SSR Middleware",
   "keywords": [
     "sandulat",
     "laratron"
