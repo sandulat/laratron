@@ -23,7 +23,7 @@ final class LaratronMiddleware
      * @param  \Closure  $next
      * @return Illuminate\Http\Response
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
         $crawlerDetect = new CrawlerDetect;
 
