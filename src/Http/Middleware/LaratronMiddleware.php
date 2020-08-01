@@ -39,8 +39,8 @@ final class LaratronMiddleware
 
                 $response = new Response($clientResponse->getBody());
 
-                $response->header('Content-Type', 'text/html');
-
+                $response->headers->set('Content-Type','text/html');
+               
                 return $response;
             } catch (BadResponseException $e) {
                 Log::error($e->getMessage());
