@@ -8,11 +8,11 @@ use Closure;
 use GuzzleHttp\Client;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 use GuzzleHttp\Exception\BadResponseException;
+use Symfony\Component\HttpFoundation\Response;
 
 final class LaratronMiddleware
 {
@@ -39,8 +39,8 @@ final class LaratronMiddleware
 
                 $response = new Response($clientResponse->getBody());
 
-                $response->header('Content-Type', 'text/html');
-
+                $response->headers->set('Content-Type','text/html');
+               
                 return $response;
             } catch (BadResponseException $e) {
                 Log::error($e->getMessage());
